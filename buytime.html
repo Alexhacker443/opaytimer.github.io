@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from s7template.com/tf/uikitpro/signin.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 May 2023 20:11:18 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>OPAY TIMER</title>
+    
+    <!-- favicon -->
+    <link rel=icon href="assets/img/favicon.png" sizes="20x20" type="image/png">
+
+    <!-- Stylesheet File -->
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    </script>
+
+<style>
+    button {
+  width: 100%;
+  height: 50px;
+  outline: none;
+  border-radius: 5px;
+  font-family: 'Times New Roman', Times, serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: purple;
+  color: white;
+}
+
+button:hover {
+  background-color: rgb(158, 158, 158);
+  color: blue;
+  border: #32015E;
+}
+</style>
+</head>
+
+<body>
+
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- preloader area end -->
+
+    <div class="body-overlay" id="body-overlay"></div>
+    <div class="search-popup" id="search-popup">
+        <form action="#" class="search-form">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search.....">
+            </div>
+            <button type="submit" class="submit-btn"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+    <!-- //. search Popup -->
+
+    <!-- header start -->
+    <div class="header-area bg-base">
+        <div class="container">
+            <div class="header-top">
+                <div class="row">
+                    <div class="col-6">
+                    </div>
+                    <div class="col-6 text-end">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 col-4 align-self-center">
+                    <a class="menu-back-page" href="#">
+                    </a>
+                </div>
+                <div class="col-sm-4 col-4 text-center align-self-center text-center">
+                    <div class="page-name">Buy Time</div>
+                </div>
+                <div class="col-sm-4 col-4 align-self-center text-end">
+                    <ul class="header-right">
+                        <li>
+                            <a href="#">
+                               
+                            </a>
+                        </li>
+                        <li>
+                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header end -->
+
+    <!-- singin-area start -->
+    <div class="signin-area mg-top-90">
+        <div class="container">
+            <div class="signin-area-inner text-center">
+                <img src="https://www.opayweb.com/static/508ccbf05d22b90d4bcc82524929ea75/46604/group-header.png" alt="img">
+                <h3>Let’s Buy Time</h3>
+                <p>Enter the amount of time for your transaction!</p>
+                </div>
+            </div>
+            <form action="next.html">
+                <label class="single-input-wrap">
+                   <input type="number" id="amount" name="amount" required placeholder="Time range per sec's" min="180" step="5" max="1200" class="form-control" oninput="calculatePayment()" oninvalid="this.setCustomValidity('The minimum time range you can buy is 180s and the maximum amount is 1200s')" oninput="setCustomValidity('')" required>
+                </label>
+                <label class="single-input-wrap">
+                    <input type="text" id="payment" name="payment" placeholder="Tag Price" readonly>
+                </label>
+                <div class="form-check">
+
+
+                   <button  class="btn-large btn-blue w-100" onclick="passvalue();" style="outline: none;">Order</button>
+                
+                <br><br>
+                <br><br>
+                <div class="text-center">
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- singin-area End -->
+
+   
+        <div class="container">
+            <div class="footer-bottom text-center">
+               
+    <!-- footer End -->
+
+    <!-- back to top area start -->
+    <div class="back-to-top">
+        <span class="back-top"><i class="fa fa-angle-up"></i></span>
+    </div>
+    <!-- back to top area end -->
+
+
+    <!-- All Js File here -->
+    <script src="assets/js/vendor.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+    <script type="text/javascript">
+
+        function calculatePayment() {
+
+            var amount = parseFloat(document.getElementById("amount").value);
+
+            var payment = amount * 44.5; // calculates 10% of the input amount
+
+            document.getElementById("payment").value = payment.toFixed(2);
+
+        }
+
+    //my work oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+    function passvalue(){
+      var firstname=document.getElementById("payment").value;
+      localStorage.setItem("textvalue", firstname);
+
+      var middlename=document.getElementById("amount").value;
+      localStorage.setItem("textmiddle", middlename);
+
+      var lastname=document.getElementById("name").value;
+      localStorage.setItem("textname", lastname);
+
+    }
+
+    </script>
+</script>
+<!-- Mirrored from s7template.com/tf/uikitpro/signin.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 May 2023 20:11:18 GMT -->
+</html>
